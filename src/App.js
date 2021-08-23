@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const moviesList = {
@@ -25,14 +25,29 @@ const moviesList = {
 };
 
 export default function App() {
+  const [movieGenre, setMovieGenre] = useState([]);
+  const onClickHandler = (e) => {
+    const selectedMoviesList = moviesList[e.target.innerText.toLowerCase()];
+    const set = selectedMoviesList.map((selectedMovie) => {
+      return (
+        <div>
+          <div>{selectedMovie.movieName}</div>
+          <div>{selectedMovie.description}</div>
+          <div>{selectedMovie.rating}</div>
+        </div>
+      );
+    });
+    return setMovieGenre(set);
+  };
   return (
     <div>
       <h1>Good Movies</h1>
       <p>Check out my favorite selection of movies.</p>
-      <button>Thriller</button>
-      <button>Science Fiction</button>
-      <button>Fantasy</button>
-      <button>Romantic</button>
+      <button onClick={onClickHandler}>Thriller</button>
+      <button onClick={onClickHandler}>sci-fi</button>
+      <button onClick={onClickHandler}>Fantasy</button>
+      <button onClick={onClickHandler}>Romantic</button>
+      <div>{movieGenre}</div>
     </div>
   );
 }
