@@ -1,2 +1,3 @@
-# fun-with-flags
-Created with CodeSandbox
+# movie-recommendation
+
+Check out this React app to see what movies I recommend

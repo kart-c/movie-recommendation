@@ -52,8 +52,6 @@ button:active {
   position: relative;
 }
 
-.card button {
-  position: absolute;
-  top: 0.6rem;
-  right: 0.6rem;
-}
+/* .card:last-child {
+  margin-bottom: 1rem;
+} */
