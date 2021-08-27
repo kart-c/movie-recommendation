@@ -94,7 +94,7 @@ export default function App() {
           <h2>{movies.movieName}</h2>
           <p>{movies.description}</p>
           <div>
-            <i class="star icon"></i> {movies.rating}/5
+            <i className="star icon"></i> {movies.rating}/5
           </div>
         </div>
       );
