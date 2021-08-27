@@ -109,7 +109,7 @@ export default function App() {
           <h2>{selectedMovie.movieName}</h2>
           <p>{selectedMovie.description}</p>
           <div>
-            <i class="star icon"></i> {selectedMovie.rating}/5
+            <i className="star icon"></i> {selectedMovie.rating}/5
           </div>
         </div>
       );
