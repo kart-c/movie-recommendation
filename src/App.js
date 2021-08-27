@@ -108,7 +108,9 @@ export default function App() {
         <div key={selectedMovie.movieName} className="card">
           <h2>{selectedMovie.movieName}</h2>
           <p>{selectedMovie.description}</p>
-          <div>Rating: {selectedMovie.rating}/5</div>
+          <div>
+            <i class="star icon"></i> {selectedMovie.rating}/5
+          </div>
         </div>
       );
     });
